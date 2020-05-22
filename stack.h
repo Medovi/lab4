@@ -8,23 +8,23 @@
 
 using namespace std;
 
-template <typename T> //шаблон
+template <typename T> 
 class Stack {
 private:
-	T *array; //указатель на массив
-	int size; //размер стека
-	int count; //верхний элемент стека
+	T *array; 
+	int size; 
+	int count; 
 public:
-	Stack():Stack(5){} //конструктор по умолчанию
-	Stack(int size_){ //конструктор с параметрами
+	Stack():Stack(5){}
+	Stack(int size_){ 
         if (size_ > 0)
         size = size_;
 		else
         size = 5;
-		array = new T[size + 1]; //выделение памяти
-		for (int i = 0; i <= size; ++i) //заполнение нулями
+		array = new T[size + 1]; 
+		for (int i = 0; i <= size; ++i) 
         array[i] = 0;
-		count = -1; //индикатор пустого стека
+		count = -1;
 	}
 	Stack(const Stack & p){
 		size = p.size;
@@ -34,7 +34,7 @@ public:
 		}
 	}
 
-	bool Push(T item){ //проталкиваем элементы
+	bool Push(T item){ 
 		if (count == size-1)
             return false;
         else{
@@ -44,7 +44,7 @@ public:
 		}
 	}
 
-	bool Pop(){ //производим выборку
+	bool Pop(){ 
 		if (count == -1){
 			return false;
 		}
@@ -55,7 +55,7 @@ public:
 		}
 	}
 
-	T Top(){ //возвращаем верхний элемент
+	T Top(){ 
 		if (count == -1){
 			return -1;
 		}
@@ -63,21 +63,21 @@ public:
         return array[count];
 	}
 
-	void Clear(){ //очищаем стек (полная выборка)
+	void Clear(){ 
 		for (int i = 0; i < size; ++i)
         array[i] = 0;
 		count = -1;
 		return;
 	}
 
-	bool isEmpty(){ //проверяем стек на пустоту
+	bool isEmpty(){ 
 	    if (count == -1)
         return true;
         else
         return false;
 	}
 
-	int Size(){ //возвращает размер стека
+	int Size(){
 		return size;
 	}
 
@@ -89,7 +89,7 @@ public:
 		return *this;
 	}
 
-	void Print() const{ //выводим стек
+	void Print() const{ 
 		for (int i = size-1; i >= 0; --i){
             cout << " ";
 			cout << array[i];
@@ -99,7 +99,7 @@ public:
 		cout << endl << endl;
 	}
 
-	~Stack(){ //очищаем память
+	~Stack(){ 
 		delete[]array;
 	}
 };
