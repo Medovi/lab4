@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1590142846 source:c:\users\Саша\desktop\лаба\стек1\main.cpp
+1590163143 source:c:\users\Саша\desktop\лаба\стек1\main.cpp
 	"Stack.h"
 
 1590129123 source:c:\users\Саша\desktop\лаба\стек1\stack.cpp
 	"stack.h"
 
-1590143502 c:\users\Саша\desktop\лаба\стек1\stack.h
+1590163302 c:\users\Саша\desktop\лаба\стек1\stack.h
 	<iostream>
 	<string>
 	<conio.h>

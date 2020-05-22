@@ -49,13 +49,14 @@ int main() {
 				case 1:
 					cout << "Vvedite chislo:";
 					cin >> celoe;
-					p.Push(celoe);
+					if (p.Push(celoe) == false)
+                    cout <<"Perepolneno!"<< endl;
 					cout << endl;
 					break;
 				case 2:
 					cout << "Viborka:" << endl;
-					p.Pop();
-					cout << endl;
+					if (p.Pop() == false)
+					cout <<"Pusto!"<< endl;
 					break;
 				case 3:
 					cout << "Verhniy element: " << p.Top() << endl;
@@ -113,13 +114,13 @@ int main() {
 				case 1:
 					cout << "Vvedite veschestvennoe chislo: ";
 					cin >> veschestv;
-					p.Push(veschestv);
-					cout << endl;
+					if (p.Push(veschestv) == false)
+                    cout <<"Perepolneno!"<< endl;
 					break;
 				case 2:
 					cout << "Viborka:" << endl;
-					p.Pop();
-					cout << endl;
+					if (p.Pop() == false)
+					cout <<"Pusto!"<< endl;
 					break;
 				case 3:
 					cout << "Verhniy element: " << p.Top() << endl;
@@ -177,13 +178,13 @@ int main() {
 				case 1:
 					cout << "Vvedite symbol: ";
 					cin >> symbol;
-					p.Push(symbol);
-					cout << endl;
+					if (p.Push(symbol) == false)
+                    cout <<"Perepolneno!"<< endl;
 					break;
 				case 2:
 					cout << "Viborka:" << endl;
-					p.Pop();
-					cout << endl;
+					if (p.Pop() == false)
+					cout <<"Pusto!"<< endl;
 					break;
 				case 3:
 					cout << "Verhniy element: " << p.Top() << endl;
