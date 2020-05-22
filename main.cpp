@@ -11,7 +11,6 @@ int main() {
 	char symbol =0;
 
 	while (1){
-		L:
 		cout << "Vvedite 1 dlya celogo steka;" << endl;
 		cout << "Vvedite 2 dlya veschestvennogo steka;" << endl;
 		cout << "Vvedite 3 dlya symbolnogo steka;" << endl;
