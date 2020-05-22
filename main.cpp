@@ -25,13 +25,13 @@ int main() {
 		{
 			cout << "Razmer: ";
 			cin >> size;
-			Stack<int> A(size);
+			Stack<int> p(size);
 			if (size <= 0)
             size = 5;
             else
             size = size;
 			cout << "Vi vveli stek s razmerom: " << size << endl << endl;
-			A.Print();
+			p.Print();
 			while (1) {
 				cout << "Vvedite 1 dlya vvoda odnogo elementa;" << endl;
 				cout << "Vvedite 2 dlya viborki iz steka;" << endl;
@@ -49,30 +49,30 @@ int main() {
 				case 1:
 					cout << "Vvedite chislo:";
 					cin >> celoe;
-					A.Push(celoe);
+					p.Push(celoe);
 					cout << endl;
 					break;
 				case 2:
 					cout << "Viborka:" << endl;
-					A.Pop();
+					p.Pop();
 					cout << endl;
 					break;
 				case 3:
-					cout << "Verhniy element: " << A.Top() << endl;
+					cout << "Verhniy element: " << p.Top() << endl;
 					break;
 				case 4:
-					if (A.isEmpty())
+					if (p.isEmpty())
                     cout << "Pustoy stek." << endl;
 					else
                     cout << "Stek ne pustoy.";
 					cout << endl;
 					break;
 				case 5:
-					cout << "Razmer steka: " << A.Size() << endl;
+					cout << "Razmer steka: " << p.Size() << endl;
 					break;
 				case 6:
 					cout << "Ochischaem stek" << endl;
-					A.Clear();
+					p.Clear();
 					cout << endl;
 					break;
 				case 7:
@@ -81,7 +81,7 @@ int main() {
 					break;
 				}
 				cout << "Stek: " << endl << endl;
-				A.Print();
+				p.Print();
 			}
 		}
 			break;
@@ -89,13 +89,13 @@ int main() {
 		{
 			cout << "Razmer: ";
 			cin >> size;
-			Stack<float> A(size);
+			Stack<float> p(size);
 			if (size <= 0)
             size = 5;
             else
             size = size;
 			cout << "Vi vveli stek s razmerom: " << size << endl << endl;
-			A.Print();
+			p.Print();
 			while (1) {
 				cout << "Vvedite 1 dlya vvoda odnogo elementa;" << endl;
 				cout << "Vvedite 2 dlya viborki iz steka;" << endl;
@@ -113,30 +113,30 @@ int main() {
 				case 1:
 					cout << "Vvedite veschestvennoe chislo: ";
 					cin >> veschestv;
-					A.Push(veschestv);
+					p.Push(veschestv);
 					cout << endl;
 					break;
 				case 2:
 					cout << "Viborka:" << endl;
-					A.Pop();
+					p.Pop();
 					cout << endl;
 					break;
 				case 3:
-					cout << "Verhniy element: " << A.Top() << endl;
+					cout << "Verhniy element: " << p.Top() << endl;
 					break;
 				case 4:
-					if (A.isEmpty())
+					if (p.isEmpty())
                     cout << "Pustoy stek." << endl;
 					else
                     cout << "Stek ne pustoy.";
 					cout << endl;
 					break;
 				case 5:
-					cout << "Razmer steka: " << A.Size() << endl;
+					cout << "Razmer steka: " << p.Size() << endl;
 					break;
 				case 6:
 					cout << "Ochischaem stek" << endl;
-					A.Clear();
+					p.Clear();
 					cout << endl;
 					break;
 				case 7:
@@ -145,7 +145,7 @@ int main() {
 					break;
 				}
 				cout << "Stek: " << endl << endl;
-				A.Print();
+				p.Print();
 			}
 		}
 			break;
@@ -153,13 +153,13 @@ int main() {
 		{
 			cout << "Razmer: ";
 			cin >> size;
-			Stack<char> A(size);
+			Stack<char> p(size);
 			if (size <= 0)
             size = 5;
             else
             size = size;
 			cout << "Vi vveli stek s razmerom: " << size << endl << endl;
-			A.Print();
+			p.Print();
 			while (1) {
 				cout << "Vvedite 1 dlya vvoda odnogo elementa;" << endl;
 				cout << "Vvedite 2 dlya viborki iz steka;" << endl;
@@ -177,30 +177,30 @@ int main() {
 				case 1:
 					cout << "Vvedite symbol: ";
 					cin >> symbol;
-					A.Push(symbol);
+					p.Push(symbol);
 					cout << endl;
 					break;
 				case 2:
 					cout << "Viborka:" << endl;
-					A.Pop();
+					p.Pop();
 					cout << endl;
 					break;
 				case 3:
-					cout << "Verhniy element: " << A.Top() << endl;
+					cout << "Verhniy element: " << p.Top() << endl;
 					break;
 				case 4:
-					if (A.isEmpty())
+					if (p.isEmpty())
                     cout << "Pustoy stek." << endl;
 					else
                     cout << "Stek ne pustoy.";
 					cout << endl;
 					break;
 				case 5:
-					cout << "Razmer steka: " << A.Size() << endl;
+					cout << "Razmer steka: " << p.Size() << endl;
 					break;
 				case 6:
 					cout << "Ochischaem stek" << endl;
-					A.Clear();
+					p.Clear();
 					cout << endl;
 					break;
 				case 7:
@@ -209,7 +209,7 @@ int main() {
 					break;
 				}
 				cout << "Stek: " << endl << endl;
-				A.Print();
+				p.Print();
 			}
 		}
 		break;
