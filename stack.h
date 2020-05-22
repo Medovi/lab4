@@ -8,23 +8,23 @@
 
 using namespace std;
 
-template <typename T> //шаблон
+template <typename T> //СЃРѕР·РґР°С‘Рј С€Р°Р±Р»РѕРЅ
 class Stack {
 private:
-	T *array; //указатель на массив
-	int size; //размер стека
-	int count; //верхний элемент стека
+	T *array; //СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ
+	int size;
+	int count; //РІРµСЂС…РЅРёР№ СЌР»РµРјРµРЅС‚
 public:
-	Stack():Stack(5){} //конструктор по умолчанию
-	Stack(int size_){ //конструктор с параметрами
+	Stack():Stack(5){}
+	Stack(int size_){
         if (size_ > 0)
-        size = size_;
-		else
-        size = 5;
-		array = new T[size + 1]; //выделение памяти
-		for (int i = 0; i <= size; ++i) //заполнение нулями
+        	size = size_;
+	else
+        	size = 5;
+	array = new T[size + 1];
+	for (int i = 0; i <= size; ++i)
         array[i] = 0;
-		count = -1; //индикатор пустого стека
+	count = -1;
 	}
 	Stack(const Stack & p){
 		size = p.size;
@@ -34,7 +34,7 @@ public:
 		}
 	}
 
-	void Push(T item){ //проталкиваем элементы
+	void Push(T item){ //РїСЂРѕС‚Р°Р»РєРёРІР°РµРј СЌР»РµРјРµРЅС‚С‹ "СЃРЅРёР·Сѓ РІРІРµСЂС…"
 		if (count == size-1)
         cout << "Stek polon";
         else{
@@ -44,7 +44,7 @@ public:
 		return;
 	}
 
-	void Pop(){ //производим выборку
+	void Pop(){ //РІС‹Р±РѕСЂРєР° СЌР»РµРјРµРЅС‚РѕРІ
 		if (count == -1){
 			cout << "Stek pust" << endl;
 			return;
@@ -55,30 +55,30 @@ public:
 		}
 	}
 
-	T Top(){ //возвращаем верхний элемент
+	T Top(){ //РїРѕР»СѓС‡РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ Р±РµР· РІС‹Р±РѕСЂРєРё
 		if (count == -1){
 			cout << "Stek pust!" << endl;
 			return -1;
 		}
 		else
-        return array[count];
+        	return array[count];
 	}
 
-	void Clear(){ //очищаем стек (полная выборка)
+	void Clear(){ //РѕС‡РёСЃС‚РєР° СЃС‚РµРєР°
 		for (int i = 0; i < size; ++i)
-        array[i] = 0;
+        	array[i] = 0;
 		count = -1;
 		return;
 	}
 
-	bool isEmpty(){ //проверяем стек на пустоту
+	bool isEmpty(){ //РїСЂРѕРІРµСЂРєР° РїСѓСЃС‚РѕРіРѕ СЃС‚РµРєР°
 	    if (count == -1)
         return true;
         else
         return false;
 	}
 
-	int Size(){ //возвращает размер стека
+	int Size(){ 
 		return size;
 	}
 
@@ -90,7 +90,7 @@ public:
 		return *this;
 	}
 
-	void Print() const{ //выводим стек
+	void Print() const{ 
 		for (int i = size-1; i >= 0; --i){
             cout << " ";
 			cout << array[i];
@@ -100,7 +100,7 @@ public:
 		cout << endl << endl;
 	}
 
-	~Stack(){ //очищаем память
+	~Stack(){ //РѕС‡РёСЃС‚РєР° РїР°РјСЏС‚Рё
 		delete[]array;
 	}
 };
